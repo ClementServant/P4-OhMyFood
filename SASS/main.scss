@@ -1,0 +1,73 @@
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixing';
+
+@import './base/animations';
+@import './base/reset';
+
+@import './components/buttons';
+@import './components/hovers';
+
+@import './layout/flexbox';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/navbar';
+
+
+body {
+    width: 375px;
+    height: 2252px;
+    margin: 0;
+}
+
+/*** Header ***/
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 197px;
+    height: 36px;
+    padding: 14px 89px 13px 89px;
+    text-align: center;
+    font-family: Shrikhand, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    gap: 17px;
+    background-color: #EAEAEA;
+}
+
+.icon-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #353535;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: #353535;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+
