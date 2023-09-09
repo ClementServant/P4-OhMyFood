@@ -1,64 +1,54 @@
-@import './utils/variables';
-@import './utils/functions';
-@import './utils/mixing';
 
-@import './base/animations';
-@import './base/reset';
-
-@import './components/buttons';
-@import './components/hovers';
-
-@import './layout/flexbox';
-@import './layout/footer';
-@import './layout/header';
-@import './layout/navbar';
 
 
 body {
-    width: 375px;
-    height: 2252px;
     margin: 0;
 }
 
 /*** Header ***/
+
+header {
+    background-color: #EAEAEA;
+}
 
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 63px;
+    background: #FFF;
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.logo {
+.title__logo {
     display: flex;
     justify-content: center;
-    width: 197px;
     height: 36px;
-    padding: 14px 89px 13px 89px;
+    padding: 14px 0 13px 0;
     text-align: center;
     font-family: Shrikhand, sans-serif;
     font-size: 30px;
     font-weight: 400;
 }
 
+/*** ***/
+
 .location {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     height: 50px;
+    margin-top: 0.5px;
     gap: 17px;
     background-color: #EAEAEA;
 }
 
-.icon-location{
+.location__icons{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #353535;
 }
 
-.city {
+.location__city {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,4 +60,46 @@ body {
     font-weight: 500;
 }
 
+/*** infos ***/
 
+.infos {
+    background: #F6F6F6;
+}
+
+.infos-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    height: 50px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.button span {
+    display: flex;
+    padding: 13px 18px;
+}
+
+.button:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+
+}
