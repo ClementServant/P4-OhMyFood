@@ -17,36 +17,28 @@ header {
 }
 
 .title__logo {
-  display: flex;
-  justify-content: center;
   height: 36px;
   padding: 14px 0 13px 0;
-  text-align: center;
   font-family: Shrikhand, sans-serif;
   font-size: 30px;
   font-weight: 400;
 }
 
-/*** ***/
 .location {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 50px;
-  margin-top: 0.5px;
+  margin-top: 1.5px;
   gap: 17px;
   background-color: #EAEAEA;
 }
 
 .location__icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #353535;
 }
 
 .location__city {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   color: #353535;
   font-family: Roboto, sans-serif;
@@ -57,40 +49,71 @@ header {
 
 /*** infos ***/
 .infos {
-  background: #F6F6F6;
-}
-
-.infos-1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+
+.infos__menu {
+  width: 275px;
+  margin: 0;
+  padding-top: 39px;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.infos__restaurant {
+  width: 315px;
+  margin: 0;
+  color: #353535;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFF;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
+  margin: 27px 0 57px 0;
+}
+
+.button__recherche {
+  width: 218px;
   height: 50px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
+  border-radius: 25px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
-  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button__link {
+  color: #FFF;
+  text-decoration: none;
 }
 
 .button span {
-  display: flex;
-  padding: 13px 18px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-.button:hover {
+.button__recherche:hover {
+  border-radius: 25px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
+
+/*** Fonctionnement ***/
 
 /*# sourceMappingURL=style.css.map */
