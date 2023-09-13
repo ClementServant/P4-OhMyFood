@@ -96,11 +96,11 @@ header {
 }
 
 .button__link {
-  color: #FFF;
   text-decoration: none;
 }
 
-.button span {
+.button-txt {
+  color: #FFF;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -114,7 +114,8 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/*** Fonctionnement ***/
+/*** Autre mise en page du boutton ***/
+/*** Functioning ***/
 .functioning {
   display: flex;
   flex-direction: column;
@@ -140,6 +141,20 @@ header {
   gap: 25px;
 }
 
+.tuto__order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  border-radius: 12px;
+  color: #FFF;
+  align-self: center;
+  position: absolute;
+  left: -12px;
+}
+
 .tuto__1 {
   display: flex;
   flex-direction: row;
@@ -149,6 +164,7 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   gap: 27px;
   width: 80%;
+  position: relative;
 }
 
 .tuto__1--grey {
