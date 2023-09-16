@@ -15,8 +15,7 @@ header {
   background: #FFF;
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
-.title__logo {
+.title .title__logo {
   height: 36px;
   padding: 14px 0 13px 0;
   font-family: Shrikhand, sans-serif;
@@ -33,12 +32,10 @@ header {
   gap: 17px;
   background-color: #EAEAEA;
 }
-
-.location__icons {
+.location .location__icons {
   color: #353535;
 }
-
-.location__city {
+.location .location__city {
   margin: 0;
   color: #353535;
   font-family: Roboto, sans-serif;
@@ -56,8 +53,7 @@ header {
   background-color: #F6F6F6;
   text-align: center;
 }
-
-.infos__menu {
+.infos .infos__menu {
   width: 275px;
   margin: 0;
   padding-top: 39px;
@@ -67,8 +63,7 @@ header {
   font-style: normal;
   font-weight: 700;
 }
-
-.infos__restaurant {
+.infos .infos__restaurant {
   width: 315px;
   margin: 0;
   color: #353535;
@@ -85,21 +80,19 @@ header {
   align-items: center;
   margin: 27px 0 57px 0;
 }
-
-.button__recherche {
+.button .button__recherche {
   width: 218px;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
-
-.button__link {
+.button .button__link {
   text-decoration: none;
 }
-
-.button__txt {
+.button .button__txt {
   color: #FFF;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -107,22 +100,19 @@ header {
   font-weight: 500;
   line-height: normal;
 }
-
-.button__recherche:hover {
+.button .button__recherche:hover {
   border-radius: 25px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/*** Autre mise en page du boutton ***/
 /*** Functioning ***/
 .functioning {
   display: flex;
   flex-direction: column;
   margin-bottom: 68px;
 }
-
-.functioning__title {
+.functioning .functioning__title {
   align-items: flex-start;
   padding: 48px 0 26px 20px;
   margin: 0;
@@ -140,8 +130,7 @@ header {
   align-items: center;
   gap: 25px;
 }
-
-.tuto__order {
+.tuto .tuto__order {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,8 +143,7 @@ header {
   position: absolute;
   left: -12px;
 }
-
-.tuto__1 {
+.tuto .tuto__1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -166,12 +154,10 @@ header {
   width: 80%;
   position: relative;
 }
-
-.tuto__1--grey {
+.tuto .tuto__1--grey {
   color: #7E7E7E;
 }
-
-.tuto__1--purpel {
+.tuto .tuto__1--purpel {
   color: #9356DC;
 }
 
@@ -186,8 +172,7 @@ header {
   background: #F6F6F6;
   height: auto;
 }
-
-.restaurants__title {
+.restaurants .restaurants__title {
   align-items: flex-start;
   padding: 48px 0 26px 20px;
   margin: 0;
@@ -208,6 +193,18 @@ header {
   width: 100%;
   background-color: white;
   border-radius: 20px;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+.card .card__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.card .card__subtile {
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .card img {
@@ -215,28 +212,28 @@ header {
   object-position: bottom;
 }
 
-.card-title {
-  color: #000;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
+/*.card-title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .card-subtitle {
-  color: #000;
-  font-family: Roboto;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-}
-
+    color: #000;
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+}*/
 .restaurants-cards {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 90%;
   padding: 0 17px 0 17px;
+  margin-bottom: 66px;
 }
 
 .restaurants__link {
@@ -256,6 +253,47 @@ header {
   margin-top: 33px;
   width: 100%;
   height: 251px;
+  position: relative;
+}
+
+.restaurants-cards a:nth-child(-n+2) .card::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  background-color: #99E2D0;
+  color: #008766;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  padding: 7px 9px 6px 9px;
+  border-radius: 2px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.fa-heart {
+  position: absolute;
+  bottom: 33px;
+  right: 25px;
+  width: 22px;
+  height: 21px;
+}
+
+.fa-flip {
+  color: deeppink;
+}
+
+.fa-beat {
+  color: fuchsia;
+}
+
+.fa-bounce {
+  color: red;
+}
+
+.fa-shake {
+  color: aqua;
 }
 
 .restaurants-cards img {
@@ -289,7 +327,6 @@ header {
   flex-direction: column;
   align-items: flex-start;
   padding: 22px 25px;
-  margin-top: 66px;
   gap: 16px;
   background: #353535;
 }
