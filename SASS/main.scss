@@ -1,3 +1,7 @@
+@import 'variables';
+
+@import 'layout';
+
 
 body {
     margin: 0;
@@ -40,12 +44,12 @@ header {
     background-color: #EAEAEA;
 
     .location__icons{
-        color: #353535;
+        color: $grey;
     }
 
     .location__city {
         margin: 0;
-        color: #353535;
+        color: $grey;
         font-family: Roboto, sans-serif;
         font-size: 16px;
         font-style: normal;
@@ -63,6 +67,8 @@ header {
     background-color: #F6F6F6;
     text-align: center;
 
+    // info menu
+
     .infos__menu {
         width: 275px;
         margin: 0;
@@ -74,10 +80,12 @@ header {
         font-weight: 700;
     }
 
+    //info restaurants
+
     .infos__restaurant {
         width: 315px;
         margin: 0;
-        color:#353535;
+        color:$grey;
         font-family: Roboto, sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -102,6 +110,12 @@ header {
         border: none;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         cursor: pointer;
+
+        &:hover {
+            border-radius: 25px;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        }
     }
 
     .button__link {
@@ -109,19 +123,14 @@ header {
     }
 
     .button__txt{
-        color: #FFF;
+        color: $color-txt-button;
         font-family: Roboto, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
     }
-
-    .button__recherche:hover {
-        border-radius: 25px;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-    }
+    
 }
 
 /*** Functioning ***/
@@ -160,9 +169,9 @@ header {
         align-items: center;
         width: 24px;
         height: 24px;
-        background: #9356DC;
+        background: $primary-color;
         border-radius: 12px;
-        color: #FFF;
+        color: $color-txt-button;
         align-self: center;
         position: absolute;
         left: -12px; 
@@ -180,16 +189,16 @@ header {
         gap: 27px;
         width: 80%;
         position: relative;
-    }
-    
-    // couleur des icones
-    
-    .tuto__1--grey  {
-        color: #7E7E7E;
-    }
-    
-    .tuto__1--purpel {
-        color: #9356DC;
+
+        // couleur des icones
+
+        .tuto__1--grey  {
+            color: #7E7E7E;
+        }
+        
+        .tuto__1--purpel {
+            color: $primary-color;
+        }
     }
 }
 
@@ -253,21 +262,6 @@ header {
     object-position: bottom;
 }
 
-/*.card-title {
-    color: #000;
-    font-family: Roboto;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-}
-
-.card-subtitle {
-    color: #000;
-    font-family: Roboto;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 300;
-}*/
 
 // Restaurants card
 
@@ -301,52 +295,6 @@ header {
     position: relative;
 }
 
-// element nouveau
-
-.restaurants-cards a:nth-child(-n + 2) .card::before {
-    content: "Nouveau";
-    position: absolute;
-    top: 13px; 
-    right: 12px; 
-    background-color: #99E2D0;
-    color: #008766;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-    padding: 7px 9px 6px 9px;
-    border-radius: 2px;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-}
-
-//ajout de l'icone like
-
-.fa-heart {
-    position: absolute;
-    bottom: 33px; 
-    right: 25px; 
-    width: 22px;
-    height: 21px;
-}
-
-// color icons
-
-.fa-flip {
-    color: deeppink;
-}
-
-.fa-beat {
-    color: fuchsia;
-}
-
-.fa-bounce {
-    color: red;
-}
-
-.fa-shake {
-    color: aqua;
-}
-
 .restaurants-cards img {
     width: 100%;
     height: 70%;
@@ -372,6 +320,35 @@ header {
     padding: 5px 80px 12px 13px;
 }
 
+// element nouveau
+
+.restaurants-cards a:nth-child(-n + 2) .card::before {
+    content: "Nouveau";
+    position: absolute;
+    top: 13px; 
+    right: 12px; 
+    background-color: #99E2D0;
+    color: #008766;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 7px 9px 6px 9px;
+    border-radius: 2px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+//ajout de l'icone like
+
+.fa-heart {
+    position: absolute;
+    color: #101010;
+    bottom: 33px; 
+    right: 25px; 
+    width: 22px;
+    height: 21px;
+}
+
 /*** Footer ***/
 
 // footer 
@@ -382,7 +359,7 @@ header {
     align-items: flex-start;
     padding: 22px 25px;
     gap: 16px;
-    background: #353535;
+    background: $grey;
 
         // logo
         
