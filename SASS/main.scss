@@ -2,7 +2,7 @@
 
 @import 'layout' ;
 
-
+@import 'la-palette-du-goût.html';
 body {
     margin: 0;
 }
@@ -289,9 +289,11 @@ body {
         font-size: 17px;
         font-weight: 300;
     }
+    
 }
 
 .card img {
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -322,15 +324,27 @@ body {
 }
 
 .card-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     padding-left: 13px;
+    gap: 5px;
+    
 
-    & .card__subtile{
-        grid-row: 2;
+    & .card__title {
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal; 
     }
-
+    & .card__subtile {
+        font-family: Roboto;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal; 
+    }
+    
     & a {
         text-decoration: none;
         color: #000;
@@ -340,6 +354,7 @@ body {
 //ajout de l'icone like
 
 .fa-heart {
+    display: grid;
     color: #101010;
     bottom: 33px; 
     right: 25px; 
@@ -477,13 +492,12 @@ body {
     /*** Restaurants ***/
 
     .list-of-restaurants {
+        width: 100%;
         padding-top: 0;
-        padding: 0 180px;
     }
     
     .restaurants {
-        padding-bottom: 0;
-        padding-top: 30px;
+        padding: 30px 180px;
     
         .restaurants__title {
             padding: 0;
@@ -526,13 +540,14 @@ body {
         flex-direction: row-reverse;
         align-items: flex-end;
         padding: 30px 25px;
-        height: 114px;
+        //height: 114px;
 
         // link
 
         .footer__link {
             flex-direction: row;
             align-items: flex-start;
+            justify-content: flex-end;
             font-weight: 400;
         }
     }
