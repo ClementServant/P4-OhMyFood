@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La délice des sens</title>
+    <meta name="viewport" content="width=device-widthdevice-width, initial-scale=1.0">
+    <title>Le délice des sens</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/21c3409e61.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Pas encor integrée</h1>
+    <header class="en-tete menu-page">
+        <div class="title">
+            <a class="title__link" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img class="title__logo" src="../assets/images/logo/ohmyfood.png" alt="Logo écrit en noir du site OhMyFood">
+        </div>
+    </header>
+
+    <main>
+        <!--Photo restaurants-->
+        <img class="images" src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+        <div class="menu">
+            <section class="carte-restaurant">
+                <div class="title-restaurant">
+                    <h1 class="restaurant__title">Le délice des sens</h1>
+                    <div class="content-icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <svg class="icon-hover" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" fill="url(#paint0_linear_25368_712)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_25368_712" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#9356DC"/>
+                            <stop offset="1" stop-color="#FF79DA"/>
+                            </linearGradient>
+                            </defs>
+                        </svg> 
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <h2 class="title__menu">Entrées</h2>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Tartare de thon</p>
+                            <p class="content__subtile">Assaisonné au yuzu</p>
+                        </div>
+                        <div class="content-price">
+                            <span>25€</span>
+                        </div>
+                    </article>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Bouchée de homard croustillant</p>
+                            <p class="content__subtile">Et sa farandole de petits légumes</p>
+                        </div>
+                        <div class="content-price">
+                            <span>35€</span>
+                        </div>
+                    </article>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Poulet rôti aux herbes de Provence</p>
+                            <p class="content__subtile">Et sa crème de truffe</p>
+                        </div>
+                        <div class="content-price">
+                            <span>40€</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="menu-card">
+                    <h2 class="title__menu">Plats</h2>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Poulet rôti aux herbes de Provence </p>
+                            <p class="content__subtile">Et sa crème de truffe</p>
+                        </div>
+                        <div class="content-price">
+                            <span>40€</span>
+                        </div>
+                    </article>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Langouste rôtie</p>
+                            <p class="content__subtile">Et ses légumes de saison</p>
+                        </div>
+                        <div class="content-price">
+                            <span>35€</span>
+                        </div>
+                    </article>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Côte de bœuf Angus</p>
+                            <p class="content__subtile">Et sa purée de panais</p>
+                        </div>
+                        <div class="content-price">
+                            <span>44€</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="menu-card">
+                    <h2 class="title__menu">Desserts</h2>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Œuf au plat</p>
+                            <p class="content__subtile">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="content-price">
+                            <span>76€</span>
+                        </div>
+                    </article>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Crème brulée</p>
+                            <p class="content__subtile">Revisitée</p>
+                        </div>
+                        <div class="content-price">
+                            <span>22€</span>
+                        </div>
+                    </article>
+                    <article class="card-restaurant">
+                        <div class="content">
+                            <p class="content__title">Tiramisu</p>
+                            <p class="content__subtile">À la noisette</p>
+                        </div>
+                        <div class="content-price">
+                            <span>23€</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="button">
+                    <a class="button__link" href="#">
+                        <button class="button__recherche">
+                            <span class="button__txt">Commander</span>
+                        </button>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-restaurants">
+        <section class="footer">
+            <div>
+                <img class="footer__logo" src="../assets/images/logo/ohmyfood.png" alt="">
+            </div>
+            <div class="footer__link">
+                <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+                <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+                <a href="#">Mentions légales</a>
+                <a href="#">Contact</a>
+            </div>
+        </section>
+    </footer>
+
+
 </body>
 </html>

@@ -1,0 +1,243 @@
+/*** variable ***/
+
+$grey: #353535;
+
+/*** Header ***/
+
+.en-tete {
+    background-color: #EAEAEA;
+
+    &.menu-page {
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 17px;
+            gap: 42px;
+            box-shadow: none;
+
+            .title__link {
+                display: flex;
+                text-decoration: none;
+                color: $grey;
+                font-size: x-large;
+            }
+        }
+
+        .fa-arrow-left {
+            display: inline;
+        }
+    }
+
+    .fa-arrow-left {
+        display: none;
+    }
+}
+
+//  header title 
+
+// general
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    background: #FFF;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    // logo
+
+    .title__logo {
+        height: 36px;
+        padding: 14px 0 13px 0;
+        font-family: Shrikhand, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+// header Location 
+
+// general
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 1.5px;
+    gap: 17px;
+    background-color: #EAEAEA;
+
+    // link
+
+    & label {
+        display: none;
+    }
+
+    // icon
+
+    .location__icons{
+        color: $grey;
+    }
+
+    // location
+
+    .location__city {
+        margin: 0;
+        border: none;
+        background-color: #EAEAEA;
+
+        // hover location
+
+        &::placeholder {
+            color: $grey;
+            background-color: #EAEAEA;
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal; 
+            text-align: left;
+            opacity: 1;
+        }
+    }
+}
+
+/*** Media query desktop and tablette header ***/
+
+@media (min-width: 768px) {
+    
+    /*** header location ***/
+
+    // title
+
+    .title {
+        height: 96px;
+    }
+
+    // location
+
+    .location {
+        margin-top: 0;
+    }
+}
+
+/*** Media query desktop and tablette header ***/
+/*** Menu Page ***/
+
+@media (min-width: 768px) {
+    
+    .en-tete.menu-page {
+        .title {
+            gap: 572px;
+            width: 1440px;
+        }
+    } 
+}
+
+/*** Footer ***/
+
+// general
+
+.footer-principale .footer {
+    margin-top: 0;
+}
+
+.footer-restaurants .footer {
+    margin-top: 120px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 25px;
+    gap: 16px;
+    background: $grey;
+
+
+    // logo
+    
+    .footer__logo {
+        width: 139px;
+        height: 27px;
+        filter: invert(1);
+        font-family: Shrikhand, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    // link
+
+    .footer__link {
+        display: flex;
+        flex-direction: column;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        gap: 7px;
+    }
+
+    // icon
+
+    .footer__link i {
+        margin-right: 11px;
+        width: 11px;
+        height: 13px;
+        gap: 11px;
+
+        &::before {
+            width: 11px;
+            height: 13px;
+            font-size: small;
+        }
+    }
+
+    // style link
+
+    .footer__link a {
+        display: flex;
+        text-decoration: none;
+        color: #FFF;
+        gap: 7px;
+        height: 19px;
+    }
+}
+
+/*** Media query desktop and tablette footer ***/
+
+@media (min-width: 768px) {
+
+
+    // general
+
+    .footer {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+
+        // link
+
+        .footer__link {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-end;
+            width: 100%;
+            gap: 7px;
+
+            & .link-widht-1 {
+                font-weight: 500;
+                width: 200px;
+            }
+
+            & .link-widht-2 {
+                font-weight: 400;
+                width: 130px;
+            }
+        }
+    }
+}
