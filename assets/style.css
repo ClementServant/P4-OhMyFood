@@ -86,8 +86,14 @@
 /*** Menu Page ***/
 @media (min-width: 768px) {
   .en-tete.menu-page .title {
-    gap: 572px;
-    width: 1440px;
+    justify-content: center;
+    align-items: center;
+  }
+  .en-tete.menu-page .title .title__link {
+    justify-content: flex-start;
+  }
+  .en-tete.menu-page .title {
+    width: 100%;
   }
 }
 /*** Footer ***/
@@ -125,6 +131,12 @@
   font-weight: 500;
   gap: 7px;
 }
+.footer .footer__link h1 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  margin: 0;
+}
 .footer .footer__link i {
   margin-right: 11px;
   width: 11px;
@@ -158,6 +170,12 @@
     width: 100%;
     gap: 7px;
   }
+  .footer .footer__link h1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFF;
+    margin: 0;
+  }
   .footer .footer__link .link-widht-1 {
     font-weight: 500;
     width: 200px;
@@ -169,6 +187,7 @@
 }
 /*** variable ***/
 /*** Mixin ***/
+/*** Keyframe animation ***/
 /*** style page ***/
 .images {
   width: 100%;
@@ -316,13 +335,15 @@
 @media (min-width: 768px) {
   body {
     width: 100%;
-    max-width: 1440px;
     margin: auto;
   }
   .images {
-    max-width: 1440px;
+    width: 100%;
   }
   .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 192px;
   }
   .carte-restaurant {
@@ -385,7 +406,7 @@ body {
   align-items: center;
   margin: 27px 0 57px 0;
 }
-.button .button__recherche {
+.button .button-recherche {
   width: 218px;
   height: 50px;
   border-radius: 25px;
@@ -395,7 +416,7 @@ body {
   cursor: pointer;
   transition: background 4s ease-in-out;
 }
-.button .button__recherche:hover {
+.button .button-recherche:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
@@ -601,15 +622,12 @@ body {
 
 /*** Media querry desktop and tablette ***/
 @media (min-width: 768px) {
-  body {
-    margin: auto;
-  }
   .infos {
     padding: 30px 0;
     gap: 18px;
   }
   .infos .infos__menu {
-    width: auto;
+    width: 100%;
     font-size: 40px;
     padding-top: 0;
   }
@@ -643,7 +661,7 @@ body {
   }
   .restaurants {
     padding: 30px 180px;
-    max-width: 1440px;
+    max-width: 100%;
   }
   .restaurants .restaurants__title {
     padding: 0;
@@ -656,6 +674,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 1440px;
     row-gap: 50px;
     column-gap: 100px;
     padding: 0;

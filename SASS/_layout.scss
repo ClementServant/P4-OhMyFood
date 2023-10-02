@@ -128,11 +128,19 @@ $grey: #353535;
 /*** Menu Page ***/
 
 @media (min-width: 768px) {
+
+    .en-tete.menu-page .title {
+        justify-content: center;
+        align-items: center;
+
+        .title__link {
+            justify-content: flex-start;  //marche pas
+        }
+    }
     
     .en-tete.menu-page {
         .title {
-            gap: 572px;
-            width: 1440px;
+            width: 100%;
         }
     } 
 }
@@ -180,6 +188,13 @@ $grey: #353535;
         font-style: normal;
         font-weight: 500;
         gap: 7px;
+
+        h1 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #FFF;
+            margin: 0;
+        }
     }
 
     // icon
@@ -228,6 +243,13 @@ $grey: #353535;
             justify-content: flex-end;
             width: 100%;
             gap: 7px;
+
+            h1 {
+                font-size: 16px;
+                font-weight: 500;
+                color: #FFF;
+                margin: 0;
+            }
 
             & .link-widht-1 {
                 font-weight: 500;
