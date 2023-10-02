@@ -1,3 +1,4 @@
+/*** import style scss ***/
 /*** variable ***/
 /*** Header ***/
 .en-tete {
@@ -363,6 +364,34 @@
     padding-bottom: 40px;
   }
 }
+/*** Keyframes ***/
+@keyframes rotate-scale-up-hor {
+  0% {
+    transform: scale(1) rotateX(0);
+  }
+  50% {
+    transform: scale(1.5) rotateX(-180deg);
+  }
+  100% {
+    transform: scale(1) rotateX(-360deg);
+  }
+}
+.rotate-scale-up-hor {
+  animation: rotate-scale-up-hor 0.65s ease-in-out both;
+}
+
+@keyframes slide-bck-center {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translateZ(-400px);
+  }
+}
+.slide-bck-center {
+  animation: slide-bck-center 1s linear infinite;
+}
+
 /*** variable ***/
 /*** mixin ***/
 /*** general ***/
@@ -395,7 +424,7 @@ body {
   color: #353535;
   font-size: 18px;
   font-weight: 300;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
 }
@@ -414,11 +443,12 @@ body {
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background 4s ease-in-out;
+  transition: background 0.5s ease-in-out;
 }
 .button .button-recherche:hover {
+  transform: scale(1.1);
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.65);
 }
 .button .button__link {
   text-decoration: none;
@@ -427,7 +457,7 @@ body {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
 }
@@ -444,7 +474,7 @@ body {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
 }
@@ -500,7 +530,7 @@ body {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
 }
@@ -512,7 +542,7 @@ body {
   border-radius: 20px;
   position: relative;
   flex: 1 0 0;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
 }
@@ -527,7 +557,7 @@ body {
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
 }

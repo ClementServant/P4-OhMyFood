@@ -1,7 +1,10 @@
+/*** import style scss ***/
 
 @import 'layout' ;
 
 @import 'restaurants';
+
+@import 'keyframes';
 
 /*** variable ***/
 
@@ -23,7 +26,7 @@ $color-button-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(25
 /*** mixin ***/
 
 @mixin style-texte {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     line-height: normal;
 }
@@ -85,11 +88,12 @@ body {
         border: none;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         cursor: pointer;
-        transition: background 4s ease-in-out;
+        transition: background 0.50s ease-in-out;
     
         &:hover {
+            transform: scale(1.1);
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.65);
         }
     }
 
