@@ -4,39 +4,9 @@ $grey: #353535;
 
 /*** Header ***/
 
-.en-tete {
-    background-color: #EAEAEA;
-
-    &.menu-page {
-        .title {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding-left: 17px;
-            gap: 42px;
-            box-shadow: none;
-
-            .title__link {
-                display: flex;
-                text-decoration: none;
-                color: $grey;
-                font-size: x-large;
-            }
-        }
-
-        .fa-arrow-left {
-            display: inline;
-        }
-    }
-
-    .fa-arrow-left {
-        display: none;
-    }
-}
-
 //  header title 
 
-// general
+/*** main.scss ***/
 
 .title {
     display: flex;
@@ -105,9 +75,9 @@ $grey: #353535;
     }
 }
 
-/*** Media query desktop and tablette header ***/
+/*** Media query desktop ***/
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     
     /*** header location ***/
 
@@ -124,18 +94,53 @@ $grey: #353535;
     }
 }
 
-/*** Media query desktop and tablette header ***/
+/*** Header restaurants page ***/
+
+.en-tete {
+    background-color: #EAEAEA;
+
+    &.menu-page {
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 17px;
+            gap: 42px;
+            box-shadow: none;
+
+            .title__link {
+                display: flex;
+                text-decoration: none;
+                color: $grey;
+                font-size: x-large;
+            }
+        }
+
+        .fa-arrow-left {
+            display: inline;
+        }
+    }
+
+    .title__logo {
+        margin: 0 auto;
+    }
+
+    .fa-arrow-left {
+        display: none;
+    }
+}
+
+
+
+/*** Media query desktop ***/
 /*** Menu Page ***/
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
     .en-tete.menu-page .title {
+        display: flex;
         justify-content: center;
         align-items: center;
-
-        .title__link {
-            justify-content: flex-start;  //marche pas
-        }
     }
     
     .en-tete.menu-page {
@@ -189,7 +194,7 @@ $grey: #353535;
         font-weight: 500;
         gap: 7px;
 
-        h1 {
+        h1, h2, h3, h4 {
             font-size: 16px;
             font-weight: 500;
             color: #FFF;
@@ -225,7 +230,7 @@ $grey: #353535;
 
 /*** Media query desktop and tablette footer ***/
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
 
     // general

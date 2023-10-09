@@ -1,6 +1,8 @@
 /*** import style scss ***/
 
-@import 'layout' ;
+@import 'loader';
+
+@import 'layout';
 
 @import 'restaurants';
 
@@ -23,6 +25,11 @@ $color-txt-button: #FFFFFF;
 
 $color-button-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 
+
+// Loader
+
+$color-loader: linear-gradient(45deg, #9356DC -11.44%, #FF79DA 123.93%);
+
 /*** mixin ***/
 
 @mixin style-texte {
@@ -30,6 +37,10 @@ $color-button-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(25
     font-style: normal;
     line-height: normal;
 }
+
+// *** loader page ***//
+
+
 
 /*** general ***/
 
@@ -80,7 +91,11 @@ body {
     align-items: center;
     margin: 27px 0 57px 0;
 
-    .button-recherche {
+    .button__link {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
         width: 218px;
         height: 50px;
         border-radius: 25px;
@@ -92,13 +107,11 @@ body {
     
         &:hover {
             transform: scale(1.1);
+            animation: button-hover 1.5s ease-in-out;
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.65);
+            border-radius: 25px;
         }
-    }
-
-    .button__link {
-        text-decoration: none;
     }
 
     .button__txt{
@@ -107,10 +120,7 @@ body {
         font-weight: 500;
         @include style-texte;
     }
-    
 }
-
-
 
 /*** Functioning ***/
 
@@ -226,6 +236,10 @@ body {
         }
     }
 
+    &:hover {
+        animation: jello-horizontal 0.9s ease-in;
+    }
+
     // card contenair
 
     .card-content {
@@ -303,7 +317,7 @@ body {
             }
         }
 
-        // lien contenair
+        // link
         
         & a {
             text-decoration: none;
@@ -349,9 +363,9 @@ body {
     }
 }
 
-/*** Media querry desktop and tablette ***/
+/*** Media querry desktop ***/
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     
 
     // general
@@ -407,6 +421,13 @@ body {
         .tuto__1  {
             height: 72px;
             align-items: center;
+            text-align: center;
+            gap: 22px;
+
+            .tuto__text {
+                margin: 0;
+                text-align: center;
+            }
         }
     }
 
@@ -445,3 +466,4 @@ body {
         }
     }
 }
+
