@@ -6,6 +6,13 @@
   align-items: center;
   height: 100vh;
   background-color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: -10;
+  animation: loader-after-before 4s;
 }
 .loader-page .loader-container {
   text-align: center;
@@ -58,6 +65,21 @@
   animation: fillProgress 3s linear forwards;
 }
 
+/*** Keyframe  ***/
+@keyframes loader-after-before {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+  75% {
+    opacity: 1;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -350,17 +372,17 @@
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 0;
-  flex: 1 0 0;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 .carte-restaurant .card-restaurant:hover .content-price {
-  transform: translateX(-59px);
-  transition: transform 1s ease-in-out;
+  transform: translateX(-58px);
+  transition: transform 0.5s ease-in-out;
 }
 .carte-restaurant .card-restaurant:hover .content-select {
   transform: translate(0);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .carte-restaurant .card-restaurant .content {
   display: flex;
@@ -379,6 +401,7 @@
 }
 .carte-restaurant .card-restaurant .content .content__title {
   margin: 0;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -387,6 +410,7 @@
 }
 .carte-restaurant .card-restaurant .content .content__subtile {
   margin: 0;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -397,8 +421,7 @@
   display: flex;
   align-items: flex-end;
   gap: 5px;
-  flex: 1 0 0;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .carte-restaurant .card-restaurant .content-price span {
   color: #353535;
@@ -418,7 +441,10 @@
   height: 76px;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  transition: transform 1s ease-in-out;
+  position: absolute;
+  right: -59px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
 }
 .carte-restaurant .card-restaurant .content-select .fa-check {
   display: flex;

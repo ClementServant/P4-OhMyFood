@@ -12,7 +12,13 @@ $color-loader: linear-gradient(45deg, #9356DC -11.44%, #FF79DA 123.93%);
     align-items: center;
     height: 100vh;
     background-color: #FFFFFF;
-    //z-index: 9999; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: -10;
+    animation: loader-after-before 4s;
 
     .loader-container {
         text-align: center;
@@ -72,6 +78,26 @@ $color-loader: linear-gradient(45deg, #9356DC -11.44%, #FF79DA 123.93%);
         }
     }
 }
+
+/*** Keyframe  ***/
+
+@keyframes loader-after-before {
+    0% {
+        opacity: 1;
+        z-index: 9999;
+    }
+    75% {
+        opacity: 1;
+        z-index: 9999;
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+
+}
+
+
 
 @keyframes bounce {
     0%, 100% {
