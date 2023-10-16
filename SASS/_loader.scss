@@ -36,7 +36,6 @@ $color-loader: linear-gradient(45deg, #9356DC -11.44%, #FF79DA 123.93%);
             align-items: center;
             margin-top: 20px; 
             font-size: 25px;
-            //background: #FFFFFF;
             color: #89C8FA;
             text-align: center;
             padding: 10px;
@@ -108,6 +107,7 @@ $color-loader: linear-gradient(45deg, #9356DC -11.44%, #FF79DA 123.93%);
         transform: translateY(-10px);
     }
 }
+
 
 @keyframes fillProgress {
     0% {

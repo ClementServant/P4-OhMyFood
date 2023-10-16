@@ -384,6 +384,10 @@
   transform: translate(0);
   transition: transform 0.5s ease-in-out;
 }
+.carte-restaurant .card-restaurant:hover .content {
+  width: calc(100% - 116px);
+  transition: width 0.5s ease-in-out;
+}
 .carte-restaurant .card-restaurant .content {
   display: flex;
   align-items: flex-start;
@@ -398,6 +402,7 @@
   font-style: normal;
   line-height: normal;
   color: #000;
+  transition: width 0.5s ease-in-out;
 }
 .carte-restaurant .card-restaurant .content .content__title {
   margin: 0;
@@ -515,18 +520,18 @@
   }
 }
 /*** Keyframes ***/
-@keyframes roll-in-right {
+@keyframes scale-in-center {
   0% {
-    transform: translateX(800px) rotate(540deg);
+    transform: scale(0);
     opacity: 0;
   }
   100% {
-    transform: translateX(0) rotate(0deg);
+    transform: scale(1);
     opacity: 1;
   }
 }
-.roll-in-right {
-  animation: roll-in-right 0.6s ease-in;
+.scale-in-center {
+  animation: scale-in-center 0.5s ease-in 3.1s;
 }
 
 /*** explorer nos restaurants ***/
@@ -543,7 +548,20 @@
   }
 }
 .tracking-in-expand {
-  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 1s;
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 3.5s;
+}
+
+/*** section fonctionning ***/
+.tracking-in-expand-1 {
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 4s;
+}
+
+.tracking-in-expand-2 {
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 4.5s;
+}
+
+.tracking-in-expand-3 {
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 5s;
 }
 
 @keyframes button-hover {
@@ -573,21 +591,6 @@
   animation: button-hover 1.5s ease-in-out;
 }
 
-/*** section fonctionning ***/
-@keyframes roll-in-left {
-  0% {
-    transform: translateX(-800px) rotate(-540deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-.roll-in-left {
-  animation: roll-in-left 0.6s ease-in;
-}
-
 /*** section restaurant ***/
 @keyframes rotate-scale-up-hor {
   0% {
@@ -602,33 +605,6 @@
 }
 .rotate-scale-up-hor {
   animation: rotate-scale-up-hor 0.65s ease-in-out;
-}
-
-@keyframes jello-horizontal {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-.jello-horizontal {
-  animation: jello-horizontal 0.9s ease-in;
 }
 
 @keyframes flicker-1 {
@@ -688,6 +664,34 @@
 
 .scale-in-hor-left-3 {
   animation: scale-in-hor-left 0.6s ease-in forwards 1.5s;
+}
+
+/*Aminations des cartes de menu qui reprennent les animations de texte de la page principale.
+Avec se keyframe qui se situe ligne 27. 
+
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+*/
+.tracking-in-expand-4 {
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 0.5s;
+}
+
+.tracking-in-expand-5 {
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 1.5s;
+}
+
+.tracking-in-expand-6 {
+  animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 2s;
 }
 
 /*** variable ***/
@@ -846,6 +850,7 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
+  transition: transform 0.3s esase-in;
 }
 .card:nth-child(-n+2) span {
   position: absolute;
@@ -863,7 +868,7 @@ body {
   line-height: normal;
 }
 .card:hover {
-  animation: jello-horizontal 0.9s ease-in;
+  transform: scale(1.1);
 }
 .card .card-content {
   display: grid;

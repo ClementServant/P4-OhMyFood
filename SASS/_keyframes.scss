@@ -4,24 +4,25 @@
 
 // Infos 
 
-@keyframes roll-in-right {
-    0% {
-      transform: translateX(800px) rotate(540deg);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) rotate(0deg);
-      opacity: 1;
-    }
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-.roll-in-right {
-	animation: roll-in-right 0.6s ease-in;
-}
-  
+.scale-in-center {
+	animation: scale-in-center 0.5s ease-in 3.1s;
+} 
 /*** explorer nos restaurants ***/
 
 // text button
+
+// Animation utiliser pour le bouton Explorer les restaurants et pour les textes de la section fonctionnement
 
 @keyframes tracking-in-expand {
     0% {
@@ -36,8 +37,25 @@
     }
 }
 
+// Animation pour le bouton Explorer les restaurants.
+
 .tracking-in-expand {
-	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 1s;
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 3.5s;
+}
+
+/*** section fonctionning ***/
+// Animation texte section fonctionnement avec un delai plus élever.
+
+.tracking-in-expand-1 {
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 4s;
+}
+
+.tracking-in-expand-2 {
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 4.5s;
+}
+
+.tracking-in-expand-3 {
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 5s;
 }
 
 // button hover
@@ -70,23 +88,6 @@
 	animation: button-hover 1.5s ease-in-out;
 }
 
-/*** section fonctionning ***/
-
-@keyframes roll-in-left {
-  0% {
-    transform: translateX(-800px) rotate(-540deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-.roll-in-left {
-	animation: roll-in-left 0.6s ease-in;
-}
-
 /*** section restaurant ***/
 
 // hover icon like
@@ -105,36 +106,6 @@
 
 .rotate-scale-up-hor {
   animation: rotate-scale-up-hor 0.65s ease-in-out;
-}
-
-// card restaurants
-
-@keyframes jello-horizontal {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.jello-horizontal {
-	animation: jello-horizontal 0.9s ease-in;
 }
 
 // contener news
@@ -207,6 +178,40 @@
 	animation: scale-in-hor-left 0.6s ease-in forwards 1.5s;
 }
 
+/*Aminations des cartes de menu qui reprennent les animations de texte de la page principale.
+Avec se keyframe qui se situe ligne 27. 
+
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+*/
+
+// Animation de texte partie Entrées
+
+.tracking-in-expand-4 {
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 0.5s;
+}
+
+// Animation de texte partie Plats
+
+.tracking-in-expand-5 {
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 1.5s;
+}
+
+// Animation de texte partie Desserts
+
+.tracking-in-expand-6 {
+	animation: tracking-in-expand 0.7s cubic-bezier(1.000, 0.000, 0.000, 1.000) both 2s;
+}
 
 
 
