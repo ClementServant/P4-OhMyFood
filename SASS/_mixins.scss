@@ -1,0 +1,32 @@
+
+@import 'variables';
+
+
+/******************** 
+* Mixins géneral 
+*/
+
+
+
+// mixin texte page principale
+
+@mixin style-texte {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    line-height: normal;
+}
+
+
+/*** Mixin Page Restaurants ***/
+
+@mixin border-bottom {
+    border-bottom: 3px solid $tertiary-color;
+    width: 40px;
+}
+
+@mixin style-texte-restaurants {
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal;
+    color: #000;
+}

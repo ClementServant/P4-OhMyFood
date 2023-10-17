@@ -1,4 +1,9 @@
-/*** import style scss ***/
+@charset "UTF-8";
+/*** import style scss Générale ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
 .loader-page {
   display: flex;
   flex-direction: column;
@@ -101,7 +106,13 @@
     width: 750px;
   }
 }
-/*** variable ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/*********************** 
+* Feuille de style pour le header et le footer général
+*/
 /*** Header ***/
 /*** main.scss ***/
 .title {
@@ -110,7 +121,7 @@
   align-items: center;
   height: 63px;
   background: #FFF;
-  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .title .title__logo {
   height: 36px;
@@ -282,17 +293,28 @@
     color: #FFF;
     margin: 0;
   }
-  .footer .footer__link .link-widht-1 {
+  .footer .footer__link .link-width-1 {
     font-weight: 500;
     width: 200px;
   }
-  .footer .footer__link .link-widht-2 {
+  .footer .footer__link .link-width-2 {
     font-weight: 400;
     width: 130px;
   }
 }
 /*** variable ***/
-/*** Mixin ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/******************** 
+* Mixins géneral 
+*/
+/*** Mixin Page Restaurants ***/
 /*** style page ***/
 .images {
   width: 100%;
@@ -307,7 +329,6 @@
 .carte-restaurant {
   position: relative;
   top: 220px;
-  margin-bottom: 100px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -369,7 +390,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 0;
   position: relative;
@@ -486,7 +507,7 @@
   width: 40px;
 }
 
-/*** Media querry desktop ***/
+/*** Media query desktop ***/
 @media (min-width: 1024px) {
   body {
     width: 100%;
@@ -694,8 +715,33 @@ Avec se keyframe qui se situe ligne 27.
   animation: tracking-in-expand 0.7s cubic-bezier(1, 0, 0, 1) both 2s;
 }
 
-/*** variable ***/
-/*** mixin ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/******************** 
+* Mixins géneral 
+*/
+/*** Mixin Page Restaurants ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/********************* 
+* Style Page Principale
+*/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/****************** 
+* Variables 
+*/
+/*** principales ***/
+/******************** 
+* Mixins géneral 
+*/
+/*** Mixin Page Restaurants ***/
 /*** general ***/
 body {
   margin: 0;
@@ -747,7 +793,7 @@ body {
   border-radius: 25px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: background 0.5s ease-in-out;
 }
@@ -810,7 +856,7 @@ body {
   justify-content: center;
   border-radius: 20px;
   background: #F6F6F6;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   gap: 27px;
   width: 80%;
   position: relative;
@@ -850,7 +896,7 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: normal;
-  transition: transform 0.3s esase-in;
+  transition: transform 0.3s ease-in;
 }
 .card:nth-child(-n+2) span {
   position: absolute;

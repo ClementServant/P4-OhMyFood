@@ -1,6 +1,10 @@
-/*** variable ***/
 
-$grey: #353535;
+@import 'variables';
+
+/*********************** 
+* Feuille de style pour le header et le footer général
+*/
+
 
 /*** Header ***/
 
@@ -14,7 +18,7 @@ $grey: #353535;
     align-items: center;
     height: 63px;
     background: #FFF;
-    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
     // logo
 
@@ -256,12 +260,12 @@ $grey: #353535;
                 margin: 0;
             }
 
-            & .link-widht-1 {
+            & .link-width-1 {
                 font-weight: 500;
                 width: 200px;
             }
 
-            & .link-widht-2 {
+            & .link-width-2 {
                 font-weight: 400;
                 width: 130px;
             }

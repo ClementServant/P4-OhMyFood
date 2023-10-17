@@ -1,21 +1,8 @@
 /*** variable ***/
 
-$grey: #353535;
-$tertiary-color: #99E2D0;
+@import 'variables';
 
-/*** Mixin ***/
-
-@mixin border-bottom {
-    border-bottom: 3px solid $tertiary-color;
-    width: 40px;
-}
-
-@mixin style-texte {
-    font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    color: #000;
-}
+@import 'mixins';
 
 /*** style page ***/
 
@@ -37,7 +24,6 @@ $tertiary-color: #99E2D0;
 .carte-restaurant {
     position: relative;
     top: 220px;
-    margin-bottom: 100px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +67,7 @@ $tertiary-color: #99E2D0;
             justify-content: space-between;
             padding-right: 24px;
 
-            // contener icone et hover
+            // contener icon et hover
             
             .fa-heart {
                 color: #101010;
@@ -124,7 +110,7 @@ $tertiary-color: #99E2D0;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
         border-radius: 15px;
         padding: 0;
         position: relative;
@@ -159,7 +145,7 @@ $tertiary-color: #99E2D0;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            @include style-texte;
+            @include style-texte-restaurants;
             transition: width 0.5s ease-in-out;
 
             & .content__title{
@@ -244,7 +230,7 @@ $tertiary-color: #99E2D0;
     & .title__menu {
         margin: 0;
         height: 27px;
-        @include style-texte;
+        @include style-texte-restaurants;
         font-size: 16px;
         font-weight: 300;
         text-transform: uppercase; 
@@ -252,7 +238,7 @@ $tertiary-color: #99E2D0;
     }
 }
 
-/*** Media querry desktop ***/
+/*** Media query desktop ***/
 
 @media (min-width: 1024px) {
 
