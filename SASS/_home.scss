@@ -70,7 +70,6 @@ body {
         transition: background 0.50s ease-in-out;
     
         &:hover {
-            transform: scale(1.1);
             animation: button-hover 1.5s ease-in-out;
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.65);
@@ -202,10 +201,6 @@ body {
         }
     }
 
-    &:hover {
-        transform: scale(1.1);
-    }
-
     // card contenair
 
     .card-content {
@@ -309,7 +304,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 90%;
     padding: 0 17px 0 17px;
     gap: 18px;
 
