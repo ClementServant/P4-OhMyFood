@@ -72,31 +72,29 @@
                 color: #101010;
                 width: 22px;
                 height: 21px;
-                font-size: x-large;
-                //transition: opacity 600ms ease-in-out;
+                font-size: 21px;
+                position: absolute;
+                top: 40px;
+                right: 41px;
+                transition: opacity 1s ease-in-out;
+
+                &:hover {
+                    opacity: 0;
+                } 
             }
+
+            // icone like color
 
             .icon-hover {
-                display: none;
                 opacity: 0;
-                //transition: opacity 600ms ease-in-out;
-            }
+                position: absolute;
+                top: 40px;
+                right: 41px;
+                transition: opacity 1s ease-in-out;
 
-            /*** Icon hover ***/ 
-
-            // black icon
-
-            &:hover {
-                .fa-heart {
-                    display: none;
-                    opacity: 0;
-                }
-
-                // color icon
-
-                .icon-hover {
-                    display: block;
+                &:hover {
                     opacity: 1;
+                    font-size: x-large;
                 }
             }
         }
@@ -115,6 +113,7 @@
         position: relative;
         cursor: pointer;
         overflow: hidden;
+        background: #fff;
 
 
         &:hover {
@@ -262,13 +261,25 @@
         .title-restaurant {
             justify-content: center;
             gap: 24px;
+
+            .content-icon {
+                .fa-heart {
+                    top: 41px;
+                    right: 440px;
+                }
+
+                .icon-hover {
+                    top: 41px;
+                    right: 440px;
+                }
+            }
         }
 
         .menu-card {
             width: 100%;
         }
     }
-
+    
     .carte-restaurant {
         .card-restaurant {
             .content {

@@ -6,6 +6,8 @@
 
 @import 'mixins';
 
+@import 'keyframes';
+
 /*** general ***/
 
 body {
@@ -67,7 +69,7 @@ body {
         border: none;
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
         cursor: pointer;
-        transition: background 0.50s ease-in-out;
+        transition: background 700ms ease-in-out, box-shadow 700ms ease-in-out;
     
         &:hover {
             animation: button-hover 1.5s ease-in-out;
@@ -241,41 +243,36 @@ body {
             align-items: center; 
             justify-content: flex-end;
             padding-right: 25px;
-
-            // icon like noir
+            position: relative;
+        
+        
+           // icon like noir
 
             .fa-heart {
                 color: #101010;
                 width: 22px;
                 height: 21px;
-                font-size: x-large;
-                transition: opacity 600ms ease-in-out;
+                font-size: 21px;
+                position: absolute;
+                transition: opacity 1s ease-in-out;
+
+                &:hover {
+                    opacity: 0;
+                } 
             }
 
             // icone like color
 
             .icon-hover {
-                display: none;
                 opacity: 0;
-                transition: opacity 600ms ease-in-out;
-            }
+                position: absolute;
+                transition: opacity 1s ease-in-out;
 
-            // hover icone like
-
-            // icone noir
-            &:hover {
-                .fa-heart {
-                    display: none;
-                    opacity: 0;
-                }
-
-                //icon color
-
-                .icon-hover {
-                    display: block;
+                &:hover {
                     opacity: 1;
+                    font-size: x-large;
                 }
-            }
+            } 
         }
 
         // link
@@ -285,6 +282,7 @@ body {
             color: #000;
         }
     }
+
 }
 
 .card img {

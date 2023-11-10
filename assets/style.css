@@ -18,6 +18,7 @@
   opacity: 0;
   z-index: -10;
   animation: loader-after-before 4s;
+  position: fixed;
 }
 .loader-page .loader-container {
   text-align: center;
@@ -366,25 +367,30 @@
   align-items: baseline;
   justify-content: space-between;
   padding-right: 24px;
-  /*** Icon hover ***/
 }
 .carte-restaurant .title-restaurant .content-icon .fa-heart {
   color: #101010;
   width: 22px;
   height: 21px;
-  font-size: x-large;
+  font-size: 21px;
+  position: absolute;
+  top: 40px;
+  right: 41px;
+  transition: opacity 1s ease-in-out;
+}
+.carte-restaurant .title-restaurant .content-icon .fa-heart:hover {
+  opacity: 0;
 }
 .carte-restaurant .title-restaurant .content-icon .icon-hover {
-  display: none;
   opacity: 0;
+  position: absolute;
+  top: 40px;
+  right: 41px;
+  transition: opacity 1s ease-in-out;
 }
-.carte-restaurant .title-restaurant .content-icon:hover .fa-heart {
-  display: none;
-  opacity: 0;
-}
-.carte-restaurant .title-restaurant .content-icon:hover .icon-hover {
-  display: block;
+.carte-restaurant .title-restaurant .content-icon .icon-hover:hover {
   opacity: 1;
+  font-size: x-large;
 }
 .carte-restaurant .card-restaurant {
   display: flex;
@@ -397,6 +403,7 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  background: #fff;
 }
 .carte-restaurant .card-restaurant:hover .content-price {
   transform: translateX(-58px);
@@ -528,6 +535,14 @@
     justify-content: center;
     gap: 24px;
   }
+  .carte-restaurant .title-restaurant .content-icon .fa-heart {
+    top: 41px;
+    right: 440px;
+  }
+  .carte-restaurant .title-restaurant .content-icon .icon-hover {
+    top: 41px;
+    right: 440px;
+  }
   .carte-restaurant .menu-card {
     width: 100%;
   }
@@ -620,6 +635,61 @@
 * Mixins géneral 
 */
 /*** Mixin Page Restaurants ***/
+/*** Keyframes ***/
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.scale-in-center {
+  animation: scale-in-center 0.5s ease-in 3.1s;
+}
+
+/*** explorer nos restaurants ***/
+@keyframes button-hover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.button-hover {
+  animation: button-hover 1.5s ease-in-out;
+}
+
+/*** Keyframes restaurants.scss ***/
+/*** Menu card ***/
+@keyframes scale-in-hor-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.scale-in-hor-left {
+  animation: scale-in-hor-left 0.6s ease-in forwards;
+}
+
+.scale-in-hor-left-2 {
+  animation: scale-in-hor-left 0.6s ease-in forwards 1s;
+}
+
+.scale-in-hor-left-3 {
+  animation: scale-in-hor-left 0.6s ease-in forwards 1.5s;
+}
+
 /*** general ***/
 body {
   margin: 0;
@@ -673,7 +743,7 @@ body {
   border: none;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background 0.5s ease-in-out;
+  transition: background 700ms ease-in-out, box-shadow 700ms ease-in-out;
 }
 .button .button__link:hover {
   animation: button-hover 1.5s ease-in-out;
@@ -826,26 +896,27 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding-right: 25px;
+  position: relative;
 }
 .card .card-content .content-icon .fa-heart {
   color: #101010;
   width: 22px;
   height: 21px;
-  font-size: x-large;
-  transition: opacity 600ms ease-in-out;
+  font-size: 21px;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+.card .card-content .content-icon .fa-heart:hover {
+  opacity: 0;
 }
 .card .card-content .content-icon .icon-hover {
-  display: none;
   opacity: 0;
-  transition: opacity 600ms ease-in-out;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
 }
-.card .card-content .content-icon:hover .fa-heart {
-  display: none;
-  opacity: 0;
-}
-.card .card-content .content-icon:hover .icon-hover {
-  display: block;
+.card .card-content .content-icon .icon-hover:hover {
   opacity: 1;
+  font-size: x-large;
 }
 .card .card-content a {
   text-decoration: none;

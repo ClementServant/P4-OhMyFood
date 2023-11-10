@@ -17,6 +17,7 @@
     opacity: 0;
     z-index: -10;
     animation: loader-after-before 4s;
+    position: fixed;
 
     .loader-container {
         text-align: center;
